@@ -1,3 +1,4 @@
+/* Hien thi 4 hang, thay doi noi dung tuy y, <20 ki tu */
 
 #include <tv_pickit2_shift_1.c> 
 #include <tv_pickit2_shift_lcd.c> 

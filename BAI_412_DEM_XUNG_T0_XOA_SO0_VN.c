@@ -1,7 +1,8 @@
 #include <tv_pickit2_shift_1.c>
 //!#include <tv_pickit2_shift_1_proteus.c> 
 unsigned INT8    t0; 
-unsigned INT8    donvi, chuc, tram; 
+unsigned INT8    donvi, chuc, tram, nghin; 
+
 void  giai_ma_hien_thi (UNSIGNED int16 tam) 
 {
    donvi = ma7doan[tam%10];
@@ -18,8 +19,7 @@ void  giai_ma_hien_thi (UNSIGNED int16 tam)
 }
 
 void main() 
-{
-   
+{   
    set_up_port_ic_chot () ;
    setup_timer_0 (t0_ext_l_to_h|t0_div_1|t0_8_bit);
    set_timer0 (0);

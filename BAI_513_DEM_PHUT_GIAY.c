@@ -32,11 +32,11 @@ void main()
    while (true)
    {
       giai_ma_gan_cho_8led_quet ();
-      if (bdn < 10) hien_thi_8led_7doan_quet ();
+      if (bdn < 10) hien_thi_8led_7doan_quet (); // chua du 10 lan (1s) > quet de hien thi
 
       else
       {
-         bdn = bdn - 10;      // timer dem nhieu hon 10 can --> tinh cho lan sau
+         bdn = bdn - 10;      // timer dem nhieu hon 10 lan --> tinh cho lan sau
          giay++;
          if (giay == 60) 
          {

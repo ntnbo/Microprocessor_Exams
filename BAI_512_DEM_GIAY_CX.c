@@ -20,7 +20,7 @@ void main()
 {   
    set_up_port_ic_chot ();
    setup_timer_1 (t1_internal|t1_div_by_8);     // khoi tao ngat timer1, nhanh hon T1_DIV_BY_1
-   set_timer1 (3036);   // so dem bat dau
+   set_timer1 (3036);   // so dem bat dau 65536 - 62500 = 3036
    enable_interrupts (global);      // cho interrupts timer1
    enable_interrupts (int_timer1);
    giay = 0;

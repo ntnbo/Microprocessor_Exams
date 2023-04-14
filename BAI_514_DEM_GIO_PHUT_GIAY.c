@@ -7,7 +7,7 @@ signed int8       giay, bdn, phut, gio;
 void interrupt_timer1() 
 {   
    bdn++;
-   set_timer1 (3036);   // so dem bat dau
+   set_timer1 (3036);   // so dem bat dau 65536 - 62500 = 3036
 }
      
 void giai_ma_gan_cho_8led_quet() 
@@ -23,7 +23,7 @@ void giai_ma_gan_cho_8led_quet()
 void main() 
 {   
    set_up_port_ic_chot ();
-   setup_timer_1 (t1_internal|t1_div_by_1);     // khoi tao ngat timer1, nhanh hon T1_DIV_BY_1
+   setup_timer_1 (t1_internal|t1_div_by_1);     // khoi tao ngat timer1, nhanh hon T1_DIV_BY_1, dung by_8
    set_timer1 (3036);   // so dem bat dau
    enable_interrupts (global);      // cho interrupts timer1
    enable_interrupts (int_timer1);

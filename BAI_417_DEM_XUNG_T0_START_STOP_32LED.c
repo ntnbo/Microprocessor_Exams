@@ -1,6 +1,6 @@
 
-#include <tv_pickit2_shift_1.c>
-//!#include <tv_pickit2_shift_1_proteus.c>
+//!#include <tv_pickit2_shift_1.c>
+#include <tv_pickit2_shift_1_proteus.c>
 unsigned int16 t0 , t0_tam ;
 unsigned int TT_CT ;
 

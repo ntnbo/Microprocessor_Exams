@@ -1,6 +1,6 @@
 
-#include <tv_pickit2_shift_1.c>
-//!#include <tv_pickit2_shift_1_proteus.c>
+//!#include <tv_pickit2_shift_1.c>
+#include <tv_pickit2_shift_1_proteus.c>
 unsigned int8    t0; 
 void main() 
 {

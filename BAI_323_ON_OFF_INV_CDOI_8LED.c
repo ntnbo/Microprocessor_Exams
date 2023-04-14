@@ -1,18 +1,19 @@
+
 #include <tv_pickit2_shift_1.c>
 //!#include <tv_pickit2_shift_1_proteus.c>
-unsigned INT8 y; 
+unsigned int8 y; 
   
 void phim_inv() 
 {
-   IF (!input (inv))
+   if (!input (inv))
    {
       delay_ms (20);
       {
-         IF (!input (inv))
+         if (!input (inv))
          {
             y = ~y;
             xuat_32led_don_4byte (0, 0, 0, y);
-            WHILE ( ! input (inv));
+            while ( ! input (inv));
          }
       }
    }
@@ -26,15 +27,15 @@ void main()
    set_tris_b (0x3c);
    y = 0x00;
    xuat_32led_don_4byte (0, 0, 0, 0);
-   WHILE (true)
+
+   while (true)
    {
-      WHILE (input (on));
+      while (input (on));
       y = 0x0f;
       xuat_32led_don_4byte (0, 0, 0, y);
-      DO{ phim_inv (); }
-      WHILE (input (off));
+      do{ phim_inv (); }
+      while (input (off));
       xuat_32led_don_4byte (0, 0, 0, 0);
    }
 }
-
 
